@@ -34,6 +34,9 @@ nav{
 /* Left navigation starts */
 section.left-menu{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
     gap: 50px;
 
 }
@@ -55,6 +58,9 @@ section.left-menu div.nav-links a.active{
 
 section.right-menu, div.icon-links{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
     gap: 20px;
 }
 section.right-menu a{
