@@ -8,26 +8,327 @@
     --grey: rgba(128, 128, 128, 1);
     --midGrey: rgba(109, 109, 110, 0.7);
     --smokeWhite: rgba(229, 229, 229, 1);
-    --whitePlusOpacity: rgba(255, 255, 255, 0.3)
-    --white: rgba(255, 255, 255, 1)
+    --whitePlusOpacity: rgba(255, 255, 255, 0.3);
+    --white: rgba(255, 255, 255, 1);
+    --dividerColor: rgba(34, 34, 34, 1);
 }
 body{
     font-family: Netflix Sans, sans-serif;
-    background-color: var(--brand);
+    background-color: black;
     color: white;
 }
 header{
     width: 100%;
     height: 100vh;
     background-image: url('/img/heroImage.png');
+    border-bottom: 8px solid var(--dividerColor);
 }
 
 header nav {
     width: 100%;
     height: 82px;
-    background-color: var(--brand);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 26px 60px;
 }
+
+nav div.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    gap: 20px;
+}
+nav div.buttons button{
+    width: 94px;
+    height: 36px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+nav div.buttons button.first-button{
+    border: 2px solid white;
+    background-color: var(--brand);
+    color: white;
+}
+nav div.buttons button.second-button{
+    border: 2px solid var(--red);
+    background-color: var(--red);
+    color: white;
+}
+
+header section{
+    width: 100%;
+    height: 535px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+}
+
+header section div.content{
+    width: 650px;
+}
+header section div.content h1{
+    font-size: 64px;
+    font-weight: 700px;
+    text-align: center;
+}
+header section div.content p.p-one{
+    font-size: 26px;
+    font-weight: 400px;
+    text-align: center;
+    margin-top: 19px;
+}
+header section div.content p.p-two{
+    font-size: 16px;
+    font-weight: 500px;
+    text-align: center;
+    margin-top: 16px;
+}
+ section div.content form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+div.content form input#emailAddress{
+    width: 500px;
+    height: 70px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+}
+div.content form button{
+    width: 247px;
+    height: 70px;
+    background-color: var(--red);   
+    border: none;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+/* main section starts ------------------------------------- */
+.row1, .row2, .row3, .row4{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: black;
+    border-bottom: 8px solid var(--dividerColor);
+    padding: 20px 20px;
+}
+ .row1 div.content, .row2 div.content, .row3 div.content, .row4 div.content{
+    width: 1150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 96px;
+}
+div.content div.article h1{
+    font-size: 50px;
+    font-weight: 700px;
+}
+div.content div.article p{
+    font-size: 26px;
+    font-weight: 400px;
+    margin-top: 19px;
+    opacity: .8;
+}
+
+section.row2 div.content,section.row4 div.content{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
+/* Faq starts here */
+main section.faq {
+    width: 100%;
+    padding: 50px 50px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    border-bottom: 8px solid var(--dividerColor);
+}
+main section.faq div.content{
+    width: 815px;
+}
+main section.faq div.content div.faq-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+div.content div.faq-section h1{
+    font-size: 50px;
+    font-weight: 700px;
+    margin-bottom: 50px;
+}
+ div.faq-section details summary{
+    width: 815px;
+    height: 75px;
+    background-color: var(--brand);
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 400px;
+}
+
+
+ div.faq-section details div.faq-answer{
+    padding: 20px;
+    margin-top: 2px;
+    background-color: var(--brand);
+}
+
+/* Drop Down Properties */
+
+summary::-webkit-details-marker{
+    display: none;
+}
+
+summary:after{
+    content: url('/svg/plusIcon.svg');
+}
+
+details[open] summary::after{
+    content: url('/svg/minusIcon.svg');
+}
+/* Drop Down Properties ends here */
+
+section div.content p.p-two{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+/* footer Section------------ */
+
+footer{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+footer section.footer{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 130px;
+    color: var(--grey);
+}
+
+footer section.footer  a{
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 13px;
+}
+
+footer section.footer div.column{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 15px;
+
+}
+footer section.footer div.column div p.callUs{
+    font-size: 16px;
+    font-weight: 400px;
+}
+ div.column div.text-links{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 15px;
+}
+
+div.column div.button button{
+    width: 107px;
+    height: 37px;
+    border: 2px solid var(--grey);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
+    border: 2px solid var(--grey);
+    background-color: black;
+    color: var(--grey);
+}
+
+/* Tablet Responsiveness Starts here */
+@media screen and (max-width: 800px) {
+    /* nav */
+    nav div.buttons button.first-button{
+        display: none;
+    }
+    
+    
+    section div.content form{
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 50px;
+    }
+    form input#emailAddress{
+        width: 500px;
+        height: 10px;
+    }
+    form button{
+        width: 247px;
+        height: 50px;
+        font-size: 30px;
+    }
+    
+}
+/* Tablet Responsiveness Ends here */
+
+
+/* Mobile Responsiveness Starts here */
+@media screen and (max-width: 450px) {
+    nav div.buttons button.first-button{
+        display: none;
+    }
+}
+/* Mobile Responsiveness Ends here */
