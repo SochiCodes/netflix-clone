@@ -103,18 +103,18 @@ header section div.content p.p-two{
 }
 div.content form input#emailAddress{
     width: 500px;
-    height: 70px;
+    height: 60px;
     padding-left: 20px;
     border: none;
     outline: none;
 }
 div.content form button{
     width: 247px;
-    height: 70px;
+    height: 60px;
     background-color: var(--red);   
     border: none;
     color: white;
-    font-size: 30px;
+    font-size: 26px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -177,6 +177,9 @@ main section.faq {
 main section.faq div.content{
     width: 815px;
 }
+main section.faq div.content p.p-two{
+    margin-top: 50px;
+}
 main section.faq div.content div.faq-section{
     display: flex;
     flex-direction: column;
@@ -205,7 +208,6 @@ div.content div.faq-section h1{
     font-size: 26px;
     font-weight: 400px;
 }
-
 
  div.faq-section details div.faq-answer{
     padding: 20px;
@@ -261,14 +263,14 @@ footer section.footer{
 footer section.footer  a{
     text-decoration: none;
     color: var(--grey);
-    font-size: 13px;
+    font-size: 12px;
 }
 
 footer section.footer div.column{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 
 }
 footer section.footer div.column div p.callUs{
@@ -300,35 +302,193 @@ div.column div.button button{
 
 /* Tablet Responsiveness Starts here */
 @media screen and (max-width: 800px) {
+    header{
+        height: 700px;
+    }
     /* nav */
-    nav div.buttons button.first-button{
+    header nav img {
+        width: 115px;
+        height: 40px;
+    }
+    header nav div.buttons button.first-button{
         display: none;
     }
-    
-    
+    header section div.content{
+        width: 550px;
+        margin-top: 80px;
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+    header section div.content h1{
+        font-size: 50px;
+    }
+    header section div.content p.p-two{
+        font-size: 26px;
+        font-weight: 400px; 
+    }
+    header section div.content p.p-one{
+        font-size: 26px;
+        font-weight: 400px; 
+    }
     section div.content form{
         flex-direction: column;
         gap: 20px;
         padding-bottom: 50px;
     }
-    form input#emailAddress{
+    section div.content form input#emailAddress{
         width: 500px;
-        height: 10px;
+        height: 55px;
+        border-radius: 2px;
     }
-    form button{
-        width: 247px;
+    section div.content form button{
+        width: 170px;
         height: 50px;
-        font-size: 30px;
+        font-size: 20px;
+        border-radius: 2px;
+        gap: 8px;
     }
-    
+    section div.content form button img{
+        width: 18px;
+    }
+    /* header ends */
+    main section.row1 div.content, main section.row2 div.content, main section.row3 div.content, main section.row4 div.content{
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 50px 40px;
+        text-align: center;
+    }
+    main section.faq div.content{
+        width: 600px;
+    }
+    main section.faq div.content div.faq-section h1{
+        text-align: center;
+    }
+    main section.faq div.content div.faq-section details summary{
+        width: 600px;
+    }
+
+    div.content div.article h1{
+        font-size: 40px;
+    }
+    div.content div.article p{
+        font-size: 20px;
+    }
+    footer section.footer{
+        gap: 20px;
+    }
+
 }
 /* Tablet Responsiveness Ends here */
 
 
 /* Mobile Responsiveness Starts here */
 @media screen and (max-width: 450px) {
+    header{
+        height: 550px;
+    }
     nav div.buttons button.first-button{
         display: none;
     }
+    header nav {
+        padding: 23px 23px;
+    }
+    nav div.buttons button.second-button{
+        width: 70px;
+        height: 28px;
+    }
+    header nav img {
+        width: 80px;
+    }
+    header nav div.buttons button.first-button{
+        display: none;
+    }
+    header section div.content{
+        width: 350px;
+        margin-top: 5px;
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+    header section div.content h1{
+        font-size: 30px;
+        font-weight: 300px;
+    }
+    header section div.content p.p-two{
+        font-size: 20px;
+        font-weight: 400px; 
+    }
+    header section div.content p.p-one{
+        font-size: 20px;
+        font-weight: 400px; 
+    }
+    section div.content form{
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 50px;
+    }
+    section div.content form input#emailAddress{
+        width: 380px;
+        height: 45px;
+        border-radius: 2px;
+    }
+    section div.content form button{
+        width: 140px;
+        height: 40px;
+        font-size: 16px;
+        border-radius: 2px;
+        gap: 8px;
+    }
+    section div.content form button img{
+        width: 13px;
+    }
+    main section.row1 div.content, main section.row2 div.content, main section.row3 div.content, main section.row4 div.content{
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 30px 10px;
+        text-align: center;
+    }
+    .film-image{
+        width: 350px;
+        height: 280px;
+    }
+    main section.faq div.content{
+        width: 600px;
+    }
+    
+    main section.faq div.content div.faq-section details summary{
+        width: 600px;
+    }
+    main section.row1 div.content, main section.row2 div.content, main section.row3 div.content, main section.row4 div.content{
+        flex-direction: column-reverse;
+        gap: 10px;
+        padding: 50px 40px;
+        text-align: center;
+    }
+
+
+    div.content div.article h1{
+        font-size: 26px;
+    }
+    div.content div.article p{
+        font-size: 18px;
+    }
+
+    main section.faq div.content div.faq-section h1{
+        text-align: center;
+        font-size: 30px;
+        width: 400px;
+    }
+    main section.faq div.content div.faq-section details summary{
+        width: 450px;
+    }
+    main section.faq div.content div.faq-section details summary p{
+        font-size: 18px;
+    }
+    main section.faq div.content{
+        width: 450px;
+    }
+    
+    
 }
 /* Mobile Responsiveness Ends here */
